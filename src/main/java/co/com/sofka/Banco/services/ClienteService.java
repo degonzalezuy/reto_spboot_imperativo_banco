@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+
 public class ClienteService implements ICliente {
 
     @Autowired
@@ -18,7 +19,7 @@ public class ClienteService implements ICliente {
     }
 
     public ClienteDto buscarClientePorId(Long id){
-        ClienteDto clienteDto = ClienteMapper.clienteToClientDto(clienteRepository.findById(id));
+        return  null
     }
 
     @Override
@@ -29,12 +30,12 @@ public class ClienteService implements ICliente {
     }
 
     @Override
-    public Cliente eliminarCliente(Cliente cliente) {
-
+    public ClienteDto eliminarCliente(Long id) {
+        return null;
     }
 
     @Override
-    public Cliente modificarCliente(Cliente cliente) {
+    public ClienteDto modificarCliente(ClienteDto clienteDto, Long id) {
         return null;
     }
 }
