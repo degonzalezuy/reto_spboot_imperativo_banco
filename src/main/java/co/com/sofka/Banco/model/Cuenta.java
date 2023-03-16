@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Cuenta {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Long numero;
     private TipoCuenta tipoCuenta;

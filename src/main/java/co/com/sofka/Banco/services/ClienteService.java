@@ -2,14 +2,15 @@ package co.com.sofka.Banco.services;
 
 import co.com.sofka.Banco.AppUtils.ClienteMapper;
 import co.com.sofka.Banco.dto.ClienteDto;
-import co.com.sofka.Banco.interfaces.ICliente;
+import co.com.sofka.Banco.services.interfaces.ICliente;
 import co.com.sofka.Banco.model.Cliente;
 import co.com.sofka.Banco.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class ClienteService implements ICliente {
 
     @Autowired
@@ -19,7 +20,7 @@ public class ClienteService implements ICliente {
     }
 
     public ClienteDto buscarClientePorId(Long id){
-        return  null
+        return  null;
     }
 
     @Override

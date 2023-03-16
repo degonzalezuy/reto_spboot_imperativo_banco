@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
-public class clientesController {
+public class ClientesController {
 
     @Autowired
     private ClienteService service;
@@ -30,11 +30,14 @@ public class clientesController {
 
     @PostMapping
     public ResponseEntity<ClienteDto> guardarCliente(@RequestBody ClienteDto clienteDto){
-        return ResponseEntity.ok().body(service.guardarCliente(clienteDto);
+
+        return ResponseEntity.ok().body(service.guardarCliente(clienteDto));
     }
 
     @PutMapping
-    public ResponseEntity<ClienteDto> actualizarCliente(@RequestBody ClienteDto, @PathVariable Long id)
-        return service.(ClienteDto, id);
+    public ResponseEntity<ClienteDto> actualizarCliente(@RequestBody ClienteDto clienteDto, @PathVariable Long id){
+        ClienteDto clienteDto1 = service.modificarCliente(clienteDto, id);
+
+        return ResponseEntity.ok().body(clienteDto1);
     }
 }

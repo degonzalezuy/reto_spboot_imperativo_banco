@@ -1,4 +1,4 @@
-package co.com.sofka.Banco.interfaces;
+package co.com.sofka.Banco.services.interfaces;
 
 import co.com.sofka.Banco.model.Cuenta;
 

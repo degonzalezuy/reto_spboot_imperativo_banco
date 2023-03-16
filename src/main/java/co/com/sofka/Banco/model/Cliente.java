@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Cliente extends Persona{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idCliente;
     private String contrasena;
     private boolean estado;

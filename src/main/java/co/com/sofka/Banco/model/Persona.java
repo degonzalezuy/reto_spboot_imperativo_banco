@@ -10,9 +10,6 @@ public abstract class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPersona;
     private String nombre;
-
-    @OneToOne(mappedBy = "genero", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
     private Genero genero;
     private int edad;
     private int documento;
